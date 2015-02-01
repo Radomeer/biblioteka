@@ -1,0 +1,47 @@
+					MySQL commands
+
+Loging to mysql
+
+	$ mysql --version
+	$ mysql -u root -p db_name -> if we specify db_name in this line it will save us from 					typing 	USE command
+	mysql> exit;  ->
+
+	mysql> SHOW DATABASES
+	mysql> CREATE DATABASE db_name;
+	mysql> USE db_name;
+
+Permisions
+
+	GRANT ALL PRIVILEGES ON db_name.* -> type space then return
+	TO 'username'@'localhost'
+	IDENTIFIED BY 'password';
+	SHoW GRANTS FOR 'username'@'localhost';
+
+Creating a database table
+	
+	CREATE TABLE table_name (	  example 	CREATE TABLE subjects (
+	  column_name1 definition,			 id INT(11) NOT NULL AUTO_INCREMENT,
+	  column_name2 definition,			 menu_name VARCHAR(50) NOT NULL,
+      	  column_name3 definition,			 position INT(3) NOT NULL,
+	  options					 visible TINYINT(1),
+	);						 PRIMARY KEY (id)
+							);
+	SHOW COLUMNS FROM table_name;
+	DROP TABLE table_name;
+
+! USE SINGLE QUOTES for string '' in mysql NOT double quotes ""!!!
+
+CRUD -> Acronym for Create, Read, Update, Delete
+							  
+	Select *			INSERT INTO table(column1,column3,column3)
+	From tb_name;				VALUES(val1, val2, val3);
+	Where column1 = 'some_text1'	example 		
+	Order by column1 ASC;		INSERT INTO table (menu_name,position, visible)
+						VALUES('Widget Corp, 1, 1(true); -> most peple use 0 and 									1 instead true and false	
+
+	Update table			Delete from table 
+	SET column1 ='some_text';	where id = 1;
+	Where id = 1;
+
+
+
